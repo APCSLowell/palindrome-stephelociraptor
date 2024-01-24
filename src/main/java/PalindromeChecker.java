@@ -38,8 +38,8 @@ public void tester()
 public boolean palindrome(String word)
 {
   //your code here
-  String word2 = onlyLetters(word);
-  if (reverse(word2).equals(word2)){
+  String word2 = onlyLetters(reverse(word2));
+  if (reverse(word2).equals(word)){
     return true;
   }
   return false;
