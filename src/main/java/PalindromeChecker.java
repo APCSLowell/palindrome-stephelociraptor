@@ -47,8 +47,8 @@ public String reverse(String str)
 {
   String sNew = new String();
     //your code here
-  for (int i = word.length(); i > 0; i--){
-    sNew = sNew + (word.substring(i-1, i));
+  for (int i = str.length(); i > 0; i--){
+    sNew = sNew + (str.substring(i-1, i));
   }
   
 
