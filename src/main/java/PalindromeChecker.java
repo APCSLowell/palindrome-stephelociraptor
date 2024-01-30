@@ -39,7 +39,7 @@ public boolean palindrome(String word)
 {
   //your code here
   String word2 = onlyLetters(word);
-  if ((word2.toLowerCase()).equals(word2.toLowerCase())){
+  if ((word2.toLowerCase()).equals(reverse(word2.toLowerCase()))){
     return true;
   }
   return false;
@@ -48,15 +48,12 @@ public String reverse(String str)
 {
  String sNew = new String();
     //your code here
-  for (int i = str.length()-1; i >= 0; i--){
-    if (str.substring(i,i+1).equals(" ") == false && Character.isLetter(str.charAt(i))){
+  for (int i = str.length(); i > 0; i--){
+   // if (str.substring(i-1,i) != (" ") && Character.isLetter(str.charAt(i))){
       sNew = sNew + (str.charAt(i-1));
-        }
+     //   }
   }
-  
-
-  
-    return sNew;
+  return sNew;
 }
 
   public String onlyLetters(String sString){
@@ -67,7 +64,4 @@ public String reverse(String str)
     }
   }
   return newS;
-}
-
-
 }
