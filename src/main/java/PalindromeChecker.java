@@ -38,19 +38,19 @@ public void tester()
 public boolean palindrome(String word)
 {
   //your code here
-  String word2 = onlyLetters(reverse(word2));
-  if (reverse(word2.toLowerCase()).equals(word.toLowerCase())){
+  String word2 = onlyLetters(word);
+  if ((word2.toLowerCase()).equals(word2.toLowerCase())){
     return true;
   }
   return false;
 }
 public String reverse(String str)
 {
-  String sNew = new String();
+ String sNew = new String();
     //your code here
-  for (int i = str.length(); i > 0; i--){
-    if (str.substring(i,i-1).equals(" ") == false && Character.isLetter(str.charAt(i))){
-      sNew = sNew + (str.substring(i-1, i));
+  for (int i = str.length()-1; i >= 0; i--){
+    if (str.substring(i,i+1).equals(" ") == false && Character.isLetter(str.charAt(i))){
+      sNew = sNew + (str.charAt(i-1));
         }
   }
   
@@ -58,4 +58,16 @@ public String reverse(String str)
   
     return sNew;
 }
+
+  public String onlyLetters(String sString){
+  String newS = "";
+  for (int i = 0; i < sString.length(); i++){
+    if (Character.isLetter(sString.charAt(i))){
+      newS = newS + sString.charAt(i);
+    }
+  }
+  return newS;
+}
+
+
 }
